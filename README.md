@@ -1,4 +1,4 @@
 copy-links
 ==========
 
-Google Chrome Extension zum Kopieren von Links einer Webseite in die Zwischenablage
+Google Chrome Extension to copy links from a website to the clipboard
