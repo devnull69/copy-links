@@ -1,0 +1,23 @@
+* {
+	cursor: pointer;
+	color: black;
+}
+
+body, ol {
+	margin: 0;
+	padding: 0;
+   width: 200px;
+   font-family: Arial;
+	font-size: small;
+}
+
+li:hover.item {
+	background-color: rgb(227, 227, 227);
+}
+
+li {
+	padding: 4px 8px;
+	margin: 2px;
+	white-space: nowrap;
+	border-radius: 4px;
+}
