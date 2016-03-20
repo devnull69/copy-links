@@ -12,6 +12,8 @@ function onMenuSelected(tab, id) {
 		chrome.tabs.sendMessage(tab.id, 'getAllLinks', sendRequestCallbackHandler);
 	} else if(id == 'copytext') {
 		chrome.tabs.sendMessage(tab.id, 'getTextLinks', sendRequestCallbackHandler);
+	} else if (id == 'copyselection') {
+	    chrome.tabs.sendMessage(tab.id, 'getSelectionLinks', sendRequestCallbackHandler);
 	} else if(id == 'copytextselection') {
 		chrome.tabs.sendMessage(tab.id, 'getTextLinksSelection', sendRequestCallbackHandler);
 	}

@@ -11,6 +11,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		for(var i=0; i<theMatch.length; i++) {
 			data += theMatch[i] + '\n';
 		}
+	} else if (request == 'getSelectionLinks') {
+	    var theLinks = document.links;
+	    for (var i = 0; i < theLinks.length; i++) {
+	        if (document.getSelection().containsNode(theLinks[i], true) && theLinks[i].href.indexOf('javascript:') == -1) {
+	            data += theLinks[i].href + '\n';
+	        }
+	    }
 	} else if(request == 'getTextLinksSelection') {
 		var theText = window.getSelection().toString();
 		var theMatch = theText.match(/(http[^\s]*)/g);
