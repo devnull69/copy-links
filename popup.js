@@ -28,6 +28,7 @@ function setupEventHandlers() {
 }
 
 window.addEventListener('load', function() {
+    chrome.tabs.executeScript(null, { "file": "content.js" }, function () {
 		chrome.windows.getCurrent(function(w) {
 			chrome.tabs.getSelected(w.id, function(t) {
             if(t.url.indexOf("chrome.google.com/webstore") != -1) {
@@ -38,6 +39,6 @@ window.addEventListener('load', function() {
             }
 			});
 		});
-   
+    });
 }, false);
 
