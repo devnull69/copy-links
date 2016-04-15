@@ -3,6 +3,7 @@
    "version": "1.3.0",
    "description": "Copy Links clone for Chrome",
    "manifest_version": 2,
+   "minimum_chrome_version": "26",
    "background": {
       "page": "background.html",
       "persistent": true
@@ -12,13 +13,9 @@
       "default_title": "Copy Links",
       "default_popup": "popup.html"
    },
-   "content_scripts": [ {
-      "js": [ "content.js" ],
-      "matches": [ "http://*/*", "https://*/*" ]
-   } ],
    "icons": {
       "128": "icon128.png",
       "48": "icon48.png"
    },
-   "permissions": [ "tabs", "http://*/*", "https://*/*" ]
+   "permissions": [ "activeTab" ]
 }
